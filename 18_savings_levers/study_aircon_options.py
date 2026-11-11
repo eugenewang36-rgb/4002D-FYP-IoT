@@ -1,7 +1,7 @@
 """Studying / resting (6-8:30 pm): realistic aircon options instead of a 29.5 °C setpoint.
   A. Aircon off, fan only (fan speed picked to bring SET closest to the target).
-  B. Aircon cycles at 26 °C: off while the fan alone keeps the user comfortable; when the room air gets
-     so warm that even the fan on high cannot (SET above the threshold), the aircon goes on at 26 °C; it
+  B. Aircon cycles at 26 °C: off while the fan alone keeps the user comfortable. When the room air gets
+     so warm that even the fan on high cannot (SET above the threshold), the aircon goes on at 26 °C. It
      goes off again once the room air is down to 26 °C. Fan speed picked as in A.
 Everything else as folder 12 (real 6 pm start 28.4 °C, real outdoor temperatures, ceiling fan).
 Output: study_aircon_options.csv next to this script."""

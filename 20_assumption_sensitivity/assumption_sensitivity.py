@@ -9,7 +9,7 @@ Inputs varied (base value in brackets):
   UA, heat leak through the envelope (60 W/K)                       -> 40 and 90 W/K
   other internal heat, sensible + latent (190 W + 230 W)            -> x0.5 and x1.5
   warm-wall offset, MASS_OFFSET (2 °C)                              -> 0 and 4 °C
-  fan power on high (25 W; cube law below high speed)               -> 50 W (Mayer Typhoon 52 DC datasheet) and 66 W (a retailer listing)
+  fan power on high (25 W, cube law below high speed)               -> 50 W (Mayer Typhoon 52 DC datasheet) and 66 W (a retailer listing)
   starting room temperature (28.4 °C, real 6 pm average)            -> 29.1 °C (measured HDB average)
 
 Run:  python assumption_sensitivity.py     (importing folder 12 re-runs it, about 2 minutes)

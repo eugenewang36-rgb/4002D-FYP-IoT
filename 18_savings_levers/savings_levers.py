@@ -1,9 +1,9 @@
 """What would raise the evening saving? Design levers tested on the folder 12 evening model
 (ceiling fan, real Singapore outdoor temperatures, room starts 29.1 °C, home 8 pm study, workout 8:30-10 pm,
-sleep 10 pm-6 am). Each lever is a different control rule; nothing about the room or weather is changed.
+sleep 10 pm-6 am). Each lever is a different control rule. Nothing about the room or weather is changed.
 
 Levers (ASSUMED rules, to be judged on comfort as well as energy):
-  A  workout floor 25 °C: during the workout the aircon is not set below 25 °C; fan stays on high (1.21 m/s)
+  A  workout floor 25 °C: during the workout the aircon is not set below 25 °C. Fan stays on high (1.21 m/s)
   A24 same with a 24 °C floor
   B  faster sleep fan: 0.85 m/s while asleep (setpoint re-solved for SET 25) instead of the 0.5 m/s cap
   A+B both

@@ -7,11 +7,11 @@ Scenario (one evening, 5-second steps):
 
 What the system does at each change of activity (timings are ASSUMPTIONS from report 2.4.3 and
 the deck's response target):
-  - pose model (YOLO-pose) samples frames at 10 per second and looks at a 3 s window;
+  - pose model (YOLO-pose) samples frames at 10 per second and looks at a 3 s window.
   - the new activity must hold for 45 s before it is confirmed (team decision, 6 Nov 2026, all activities) -> confirmed at +48 s
   - the Pi picks the lowest-power setting, publishes it over MQTT and the
     ESP32 fires the IR commands (12 s after confirmation)                   -> applied at +60 s
-    (the response target is <= 45 s after the change is confirmed; it was 18 s / 30 s with a 15 s hold)
+    (the response target is <= 45 s after the change is confirmed, it was 18 s / 30 s with a 15 s hold)
 Before the user arrives the room is empty: aircon and fan off.
 
 Settings (from folder 12, ceiling-fan run, knob = feels like 25 °C):
@@ -19,10 +19,10 @@ Settings (from folder 12, ceiling-fan run, knob = feels like 25 °C):
   exercising       : aircon held at 25 °C + fan 1.21 m/s (high, 25 W)
 
 Compared with:
-  - aircon alone at 25 °C, switched on when the user walks in (no fan, no camera);
+  - aircon alone at 25 °C, switched on when the user walks in (no fan, no camera).
   - "no activity detection": our sitting setting kept through the workout.
 
-Variables: SET = Standard Effective Temperature (°C), what the user feels; target 25 ± 0.5 °C.
+Variables: SET = Standard Effective Temperature (°C), what the user feels. Target 25 ± 0.5 °C.
 t_a = room air temperature (°C), t_m = wall temperature (°C), v = air speed at the user (m/s).
 Outputs (next to this script): detection_response.csv, s_study_detect.png, s_exercise_detect.png
 """

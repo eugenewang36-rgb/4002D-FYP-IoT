@@ -4,16 +4,16 @@
    hold the comfort target with the least power (the same SET search as our system), but it has no camera, so it
    assumes the occupant is seated at the desk all evening. The occupant really studies, works out and sleeps, so
    the settings are wrong for two of the three activities. This separates what coordinated optimisation gives
-   (fan + warmer setpoint) from what the camera adds. (Definition proposed by Eugene; to be confirmed with Saran.)
+   (fan + warmer setpoint) from what the camera adds. (Definition proposed by Eugene, to be confirmed with Saran.)
 
 2. MORE THAN ONE OCCUPANT in the bedroom. Each extra person adds their own body heat to the room (same model as
    folder 12). Cases:
    a. 1, 2 and 3 people doing the same thing all evening (sitting, workout, sleep together).
    b. Two people during the workout (8:30-10 pm): A works out, B studies. Rule 1 = settings follow the most active
-      person (A); rule 2 = settings follow the least active person (B). B's comfort is checked with B's own
+      person (A), rule 2 = settings follow the least active person (B). B's comfort is checked with B's own
       activity (seated, 1.0 met, 0.4 clo).
 
-Run:  python extra_arm_and_occupants.py        (uses the ceiling fan; importing folder 12 re-runs it, ~2 min)
+Run:  python extra_arm_and_occupants.py        (uses the ceiling fan, importing folder 12 re-runs it, ~2 min)
 Outputs next to this script: extra_arm_and_occupants.csv, extra_arm_and_occupants.log
 """
 import contextlib, csv, io, os, sys
@@ -77,7 +77,7 @@ orig_heat = m.person_heat
 
 
 def activity2(hour, lead_act):
-    """Second person B: studies while A works out (8:30-10 pm); otherwise does what A does."""
+    """Second person B: studies while A works out (8:30-10 pm). Otherwise does what A does."""
     if lead_act == "Exercising":
         return "Sitting"
     return lead_act

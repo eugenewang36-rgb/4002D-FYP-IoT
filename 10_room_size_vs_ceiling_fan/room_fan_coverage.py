@@ -16,10 +16,10 @@ Symbols (all SI units):
     Q    = fan airflow on the chosen speed (m³/s)
     D    = fan blade diameter (m)
     S_F  = "fan air speed" = Q ÷ (π D² / 4), the airflow spread over the blade disc (m/s)
-    A    = floor area served by the fan (m²); here one fan per room, so A = room area
+    A    = floor area served by the fan (m²), here one fan per room, so A = room area
     r    = √A, the room's characteristic width (m)
     AR   = aspect ratio = long side ÷ short side (≥ 1)
-    H_c  = ceiling height (m);  H_b = blade height above the floor (m)
+    H_c  = ceiling height (m),  H_b = blade height above the floor (m)
     seated = 1 for a seated person (speed averaged over 0.1, 0.6 and 1.1 m
              above the floor, the ASHRAE 55 heights), 0 for standing
     Dimensionless groups: D/r, H_c/D, D/1.7, H_b/D
@@ -69,7 +69,7 @@ H_B = 2.3  # m, blade height: fan on a short downrod, blades 0.3 m below the
 SEATED = 1  # seated person (also the closest case for someone lying in bed)
 TARGET = 1.0  # m/s, the project's assumption: at least this everywhere
 
-# Typical HDB rooms (ASSUMPTIONS from typical floor plans; actual flats vary):
+# Typical HDB rooms (ASSUMPTIONS from typical floor plans, actual flats vary):
 # (name, length m, width m)
 ROOMS = [
     ("Common bedroom (~10 m²)", 3.3, 3.0),

@@ -27,7 +27,7 @@ Fan options (command line):
     python activity_setpoints.py ceiling    the household's existing DC ceiling
                                             fan (the system's design from Nov 2026)
 
-Outputs (saved next to this script; "_ceiling" added for the ceiling fan):
+Outputs (saved next to this script, "_ceiling" added for the ceiling fan):
     activity_setpoints.png   part 1: setpoint vs fan speed per activity
     activity_evening.png     part 2: the evening, energy and comfort
     activity_results.csv     every number behind both charts
@@ -59,15 +59,15 @@ TOL = 0.5  # °C, comfortable = SET within ±TOL of the target (team optimiser r
 # Activities: name -> (met, clo, sensible share of body heat, max fan speed m/s)
 #   met = metabolic rate: 0.7 asleep, 1.0 sitting, 3.5 home workout
 #         (calisthenics / skipping, ASHRAE compendium range ~3-4.5)
-#   clo = insulation: 0.9 in bed without covers; 0.4 T-shirt and shorts;
+#   clo = insulation: 0.9 in bed without covers, 0.4 T-shirt and shorts.
 #         0.36 light sportswear
-#   sensible share = part of the body's heat that warms the room air; the
+#   sensible share = part of the body's heat that warms the room air. The
 #         rest leaves as sweat/breath moisture (ASSUMPTION: 0.7 at rest,
 #         0.5 when exercising because of sweating)
 #   max fan = the team's limit: sleeping capped at level 1 (0.5 m/s, draught
-#         and noise); otherwise up to level 3 (1.5 m/s)
+#         and noise). Otherwise up to level 3 (1.5 m/s)
 ACTIVITIES = {
-    "Sleeping": (0.7, 0.9, 0.7, 0.85),   # sleep fan up to 0.85 m/s (4 Nov 2026; noise not modelled)
+    "Sleeping": (0.7, 0.9, 0.7, 0.85),   # sleep fan up to 0.85 m/s (4 Nov 2026, noise not modelled)
     "Sitting": (1.0, 0.4, 0.7, 1.5),
     "Exercising": (3.5, 0.36, 0.5, 1.5),
 }
@@ -77,7 +77,7 @@ EXTRA_EXERCISE = [("Light exercise (2.5 met)", 2.5), ("Hard exercise (4.5 met)",
 BODY_AREA = 1.8  # m², skin area of an average adult (1 met = 58.2 W/m²)
 
 # Standing fan levels (team design): air speed at the user (m/s) -> power (W).
-# ASSUMPTION: DC-motor fan, 15 W at 1.0 m/s; power ~ (speed)^3 plus 3 W for
+# ASSUMPTION: DC-motor fan, 15 W at 1.0 m/s. Power ~ (speed)^3 plus 3 W for
 # the electronics: 0.5 m/s 4.5 W, 1.0 m/s 15 W, 1.5 m/s 43.5 W.
 V_STILL = 0.1
 FAN_LEVELS = [0.1, 0.5, 1.0, 1.5]  # 0.1 = fan off (still air)
@@ -94,7 +94,7 @@ if FAN == "ceiling":
     # with fan speed and power with speed cubed (fan law):
     #   P = 25 W x (v / 1.21)^3  ->  0.5 m/s 1.8 W, 0.85 m/s 8.7 W, 1.21 m/s 25 W.
     # The fan cannot go above 1.21 m/s, so sitting and exercising are capped
-    # there; sleeping keeps the 0.5 m/s cap.
+    # there. Sleeping keeps the 0.5 m/s cap.
     V_CEIL_MAX, CEIL_W_MAX = 1.21, 25.0
     FAN_LEVELS = [0.1, 0.5, 0.85, V_CEIL_MAX]
     ACTIVITIES = {a: (m, c, s, min(vm, V_CEIL_MAX)) for a, (m, c, s, vm) in ACTIVITIES.items()}
@@ -108,7 +108,7 @@ SET_MIN, SET_MAX = 16.0, 30.0  # °C, aircon remote range
 
 def set_value(tdb, tr, v, met, clo):
     """SET (°C). tdb = air temperature, tr = wall (mean radiant) temperature,
-    v = air speed; sitting posture (the SET model has no lying option)."""
+    v = air speed. Sitting posture (the SET model has no lying option)."""
     return float(set_tmp(tdb=tdb, tr=tr, v=v, rh=RH, met=met, clo=clo, position="sitting",
                          limit_inputs=False, round_output=False).set)
 
@@ -140,7 +140,7 @@ Q_MAX = 2640  # W, 9,000 BTU/h bedroom fan coil
 # thermal comfort in Singapore's naturally ventilated housing", ResearchGate 339297268). Walls start at
 # the same temperature (ASSUMPTION).
 # 4 Nov 2026: the story evening starts at 6 pm, so the room and walls start at the REAL average air temperature
-# at 6 pm (folder 17, data.gov.sg stations, 2025). This is an outdoor reading; an unventilated room is usually
+# at 6 pm (folder 17, data.gov.sg stations, 2025). This is an outdoor reading. An unventilated room is usually
 # a little warmer (29.1 °C measured day/early-evening average above), so this start is slightly conservative.
 with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "17_singapore_temperature",
                        "hourly_temperature.csv"), encoding="utf-8") as _f6:
@@ -194,7 +194,7 @@ def steady_power(activity, t_set, v, cop_25, t_o=28.0):
 
 
 # =============================================================================
-# 3. Part 1: setpoint per activity and fan speed; lowest-power combination
+# 3. Part 1: setpoint per activity and fan speed. Lowest-power combination
 # =============================================================================
 rows = []
 best = {}  # activity -> (setpoint, fan speed) chosen by our system
@@ -218,10 +218,10 @@ for act, (met, clo, _, vmax) in ACTIVITIES.items():
 
 # Design rules adopted 4 Nov 2026 (folder 18 tested them):
 #  - workout: the fan runs on high and the aircon is held at WORKOUT_FLOOR_C instead of being chased colder
-#    (the user is above target for the whole workout either way; colder air costs much more for little gain)
+#    (the user is above target for the whole workout either way, colder air costs much more for little gain)
 #  - sleep: the comfort target rises slowly through the night (in-band ramp, stays inside KNOB ± TOL)
 #  - wake-up: for the last WAKE_MIN minutes the target rises to WAKE_TOP_SET so the warming room nudges the
-#    user awake; these minutes are intended and are not counted as discomfort for any strategy
+#    user awake. These minutes are intended and are not counted as discomfort for any strategy
 WORKOUT_FLOOR_C = 25.0   # °C, lowest aircon setpoint during a workout (design rule)
 SLEEP_START = 22.0       # clock hour sleep starts (story timeline)
 RAMP_PER_H = 0.05        # °C of target SET per hour of sleep (design rule)
@@ -280,9 +280,9 @@ NOW = [START]   # clock hour of the current simulation step (set by simulate())
 
 # Studying / resting (4 Nov 2026): nobody sets an aircon to 29.5 °C, so the aircon is OFF and the fan does the
 # work. Safety cycle: if even the fan on high can no longer keep the user comfortable (SET above KNOB + TOL,
-# walls taken at air temperature), the aircon goes on at STUDY_AC_C; it goes off again once the room air is
+# walls taken at air temperature), the aircon goes on at STUDY_AC_C. It goes off again once the room air is
 # down to STUDY_AC_C. folder 18 (study_aircon_options.csv) tested this: on the story evening the room only
-# reaches 29.6 °C, so the cycle never starts; switching on earlier (at SET > KNOB) overcools and adds discomfort.
+# reaches 29.6 °C, so the cycle never starts. Switching on earlier (at SET > KNOB) overcools and adds discomfort.
 STUDY_AC_C = 26.0        # °C, aircon setpoint when the safety cycle runs (a setting people actually use)
 STUDY_AC_ON = [False]    # cycle state, kept between controller updates
 
@@ -296,7 +296,7 @@ def fan_closest(act, t_a, target=KNOB):
 
 def our_system(act, t_m=None, t_a=None):
     """Our system's rule: best setting per activity, the sleep ramp, the wake-up ramp, and a fan step-down.
-    Returns (aircon setpoint °C, or None = aircon off; fan m/s).
+    Returns (aircon setpoint °C, or None = aircon off, fan m/s).
     Studying / resting: aircon off, fan picked to bring SET closest to the target, with the 26 °C safety cycle.
     Fan step-down (4 Nov 2026): an aircon cannot heat, so if the room air t_a (room sensor, SHT31) is already
     below the setpoint, the fan drops to the speed that brings SET closest to the target. The controller

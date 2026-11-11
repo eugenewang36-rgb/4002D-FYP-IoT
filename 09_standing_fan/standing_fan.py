@@ -53,7 +53,7 @@ FAN_TYPES = [("AC motor", 45),  # typical 16" AC-motor fan (box ratings 40-60 W 
              ("DC motor", 15)]  # energy-saving DC-motor fan (box ratings ~25-35 W at high)
 V_STILL = 0.1  # m/s, room air speed with no fan (still air)
 V_JET = 1.0  # m/s, air speed at the user when the fan points straight at them
-#             (1.5 m away, medium). ASSUMPTION; on high it can be 1.5-2 m/s.
+#             (1.5 m away, medium). ASSUMPTION. On high it can be 1.5-2 m/s.
 V_EDGE = 0.15  # m/s, air speed at the user while an oscillating fan points away
 #               (some mixed room air still reaches them)
 
@@ -68,7 +68,7 @@ def steady_equivalent(v_high, v_low, share_high):
     Heat removed by moving air grows with v^0.53 (the convective heat transfer
     coefficient h_c = 8.6 v^0.53 used in SET), so we average v^0.53, not v.
     ASSUMPTION: this ignores any extra cooling people feel from the gusts
-    themselves; lab studies suggest gusty air can feel a little cooler than
+    themselves. Lab studies suggest gusty air can feel a little cooler than
     steady air, so this is on the cautious side."""
     mean = share_high * v_high ** 0.53 + (1 - share_high) * v_low ** 0.53
     return mean ** (1 / 0.53)
@@ -126,16 +126,16 @@ BASE_T = 25.0  # °C, the baseline: aircon alone at 25 °C (Go 25 guidance)
 MAX_SETPOINT = 30  # °C, the highest setting on most aircon remotes
 # Situations: (name, met, clo)
 #   met = metabolic rate: 1.0 sitting relaxed, 0.7 asleep
-#   clo = insulation: 0.4 T-shirt and shorts; 0.9 in bed without covers
+#   clo = insulation: 0.4 T-shirt and shorts, 0.9 in bed without covers
 SITTING = ("Sitting (1.0 met, 0.4 clo)", 1.0, 0.4)
 IN_BED = ("In bed, no covers (0.7 met, 0.9 clo)", 0.7, 0.9)
-# NOTE: sleeping (0.7 met) is outside ASHRAE 55-2023's range (1.0-4.0 met); bed
+# NOTE: sleeping (0.7 met) is outside ASHRAE 55-2023's range (1.0-4.0 met). Bed
 # results are indicative. A fan pointed at a sleeper all night may also cause
 # dry eyes or draught complaints, so oscillating is the likelier choice in bed.
 
 
 def set_value(tdb, v, met, clo):
-    """SET (°C) at air temperature tdb and air speed v. Walls at air temperature;
+    """SET (°C) at air temperature tdb and air speed v. Walls at air temperature.
     sitting posture (the SET model has no lying option)."""
     return set_tmp(tdb=tdb, tr=tdb, v=v, rh=RH, met=met, clo=clo, position="sitting",
                    limit_inputs=False, round_output=False).set
@@ -150,7 +150,7 @@ def setpoint_equal_set(v, met, clo):
 
 
 def pmv_ppd(tdb, v, met, clo):
-    """ASHRAE 55 PMV and PPD (%); airspeed_control=True because the user controls the fan."""
+    """ASHRAE 55 PMV and PPD (%). airspeed_control=True because the user controls the fan."""
     r = pmv_ppd_ashrae(tdb=tdb, tr=tdb, vr=v, rh=RH, met=met, clo=clo, airspeed_control=True,
                        limit_inputs=False, round_output=False)
     return r.pmv, r.ppd
@@ -163,11 +163,11 @@ TARIFF = 0.3116  # S$ per kWh, SP Group Oct-Dec 2026 incl. 9% GST
 DAYS = 30  # days per month
 MASS_OFFSET = 2.0  # °C, warm concrete walls give off heat as if it were 2 °C hotter outside
 # COP = cooling delivered ÷ electricity used, at 25 °C:
-#   3.5 = older system (estimate); 5.5 = new 5-tick multi-split (NEA minimum)
+#   3.5 = older system (estimate), 5.5 = new 5-tick multi-split (NEA minimum)
 SYSTEMS = [("Older aircon (COP 3.5)", 3.5), ("New 5-tick aircon (COP 5.5)", 5.5)]
-# Rooms: hours = clock hours the aircon runs (range(22, 30) = 10 pm to 6 am);
-# UA = heat leaking in per °C of indoor-outdoor difference (W/K);
-# q_int = heat made inside (W); q_lat = moisture the aircon removes, as heat (W);
+# Rooms: hours = clock hours the aircon runs (range(22, 30) = 10 pm to 6 am).
+# UA = heat leaking in per °C of indoor-outdoor difference (W/K).
+# q_int = heat made inside (W), q_lat = moisture the aircon removes, as heat (W).
 # who = which comfort situation applies. One standing fan per room.
 ROOMS = [
     {"name": "Master bedroom", "hours": range(22, 30), "UA": 60, "q_int": 250, "q_lat": 250, "who": IN_BED},
@@ -262,7 +262,7 @@ print("\nSaved standing_fan_results.csv")
 # =============================================================================
 SURFACE, INK, INK_2, GRID = "#fcfcfb", "#0b0b0b", "#52514e", "#e4e3df"
 AIR_COLORS = ["#8f8e88", "#86b6ef", "#2a78d6"]  # aircon only, oscillating, pointed
-# Cost bars: grey = aircon only; light blue = oscillating; dark blue = pointed.
+# Cost bars: grey = aircon only, light blue = oscillating, dark blue = pointed.
 # AC-motor fan bars are hatched, DC-motor fan bars are solid.
 SC_COLORS = ["#8f8e88", "#86b6ef", "#86b6ef", "#2a78d6", "#2a78d6"]
 

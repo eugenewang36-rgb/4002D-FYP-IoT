@@ -7,7 +7,7 @@
 2. Misclassification: the first 15% of each confirmed activity block is read as a neighbouring activity
    (sleeping -> sitting, exercising -> sitting, sitting -> sleeping), alone and all together (assumption: errors
    come at the start of a block, which is the worst place because the settings then run for the whole block's
-   first minutes; this is a deliberately simple stress test, not a classifier model).
+   first minutes, this is a deliberately simple stress test, not a classifier model).
 Outputs: robustness_grid.csv, robustness_misclass.csv
 """
 import contextlib, csv, io, os, sys

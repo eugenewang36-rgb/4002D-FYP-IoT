@@ -5,14 +5,14 @@ This script re-runs the same model with three extra time-based features and repo
 
   1. Pre-cooling      aircon starts 15 min before the expected arrival (published advice, section 2.6)
   2. Pre-shutdown     aircon switches off 30 min before the expected departure (published advice, section 2.6)
-                      The base system already does this at 5:30 am (departure / wake at 6 am); here the length is swept.
+                      The base system already does this at 5:30 am (departure / wake at 6 am). Here the length is swept.
   3. Occupancy        the system shuts down when no occupant has been detected for 15 min (project target)
                       Tested with the occupant out of the bedroom for part of the evening or the whole night.
 
 Assumptions (all ASSUMED, not measured):
-  - the user's routine is already known (arrival 6 pm, departure 6 am); learning it is a Semester 2 task
+  - the user's routine is already known (arrival 6 pm, departure 6 am). Learning it is a Semester 2 task
   - while the room is empty and the occupancy rule is OFF, the system keeps the last setting it used
-  - when the room is empty the person adds no body heat; the fixed 25 °C aircon-only baseline keeps running
+  - when the room is empty the person adds no body heat. The fixed 25 °C aircon-only baseline keeps running
   - the occupant coming back is recognised at once (the 45 s confirmation is not modelled here)
 Run:  python routine_addon.py     (importing folder 12 re-runs it, about 2 minutes)
 Outputs next to this script: routine_addon.csv, routine_addon.log

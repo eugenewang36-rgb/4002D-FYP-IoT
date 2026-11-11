@@ -1,7 +1,7 @@
 """Overall system saving: time-resolved simulation of the controller's own electricity (1-minute steps, 24 h).
 
 Components (power values are ASSUMPTIONS / datasheet figures, to be measured with USB power meters in Semester 2):
-  Raspberry Pi 5 : constant average (3, 5 or 8 W; measured 3.3 W idle, 9.8 W stress test, ref [88])
+  Raspberry Pi 5 : constant average (3, 5 or 8 W, measured 3.3 W idle, 9.8 W stress test, ref [88])
   Camera         : 0.8 W while the Pi runs
   IR illuminator : 1.5 W during the 12 dark hours (18:00-06:00), off by day
   Control node   : 0.4 W, 24 h (ESP32, section 2.3.1)
@@ -9,8 +9,8 @@ Components (power values are ASSUMPTIONS / datasheet figures, to be measured wit
   PSU loss       : 15% on the total
 Overall system saving = (fixed 25 C aircon bill - (our aircon + fan bill + whole-system electricity)) / fixed 25 C bill.
 Aircon + fan bills are the folder 12 / 21 values for the 18:00-06:00 evening (older S$440 -> 288, 5-tick S$280 -> 189).
-Two accountings are given: ALL DAY (controller runs 24 h, S$ per year; conservative, the report's headline) and
-EVENING ONLY (controller energy inside the same 12 h window as the aircon bill; like-for-like).
+Two accountings are given: ALL DAY (controller runs 24 h, S$ per year, conservative, the report's headline) and
+EVENING ONLY (controller energy inside the same 12 h window as the aircon bill, like-for-like).
 """
 import csv, os
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -21,7 +21,7 @@ GROSS = {"Older aircon (COP 3.5)": 151.0, "New 5-tick aircon (COP 5.5)": 91.0}  
 
 
 def simulate(pi_w, pi_hours=24):
-    """Return per-component energy (Wh) for a 24 h day, minute by minute; hour 0 = 18:00."""
+    """Return per-component energy (Wh) for a 24 h day, minute by minute, hour 0 = 18:00."""
     e = dict(pi=0.0, camera=0.0, illuminator=0.0, control_node=0.0, sensor_nodes=0.0)
     eve = dict(e)
     for m in range(24 * 60):

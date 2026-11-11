@@ -82,7 +82,7 @@ ROOMS = [
 # =============================================================================
 CFM_TO_M3S = 0.000471947  # 1 cubic foot per minute = 0.000471947 m³/s
 D = 1.32  # m, 52-inch DC ceiling fan
-CFM = 5000  # fan airflow on high (typical 52" DC fan; ENERGY STAR list 4,365-5,741 CFM)
+CFM = 5000  # fan airflow on high (typical 52" DC fan, ENERGY STAR list 4,365-5,741 CFM)
 FAN_W = 25  # W, typical power of a 52" DC fan on high (listings 18-33 W)
 H_C, H_B = 2.6, 2.3  # m, ceiling height and blade height (as in folder 10)
 V_STILL = 0.1  # m/s, still air with no fan
@@ -116,8 +116,8 @@ for room in ROOMS:
 # 3. Comfort: SET for a sleeper
 # =============================================================================
 RH = 60  # %, relative humidity with the aircon on
-# Sleep situations: (name, met, clo). met 0.7 = asleep;
-# clo 0.9 = mattress + sleepwear (no covers); 1.5 = plus a thin blanket.
+# Sleep situations: (name, met, clo). met 0.7 = asleep.
+# clo 0.9 = mattress + sleepwear (no covers), 1.5 = plus a thin blanket.
 SLEEP_CASES = [("No covers (0.9 clo)", 0.7, 0.9), ("Thin blanket (1.5 clo)", 0.7, 1.5)]
 MAIN_CASE = SLEEP_CASES[0]  # used for the cost results, as in the rest of the project
 BASELINES = [22, 23, 24, 25, 26]  # °C, aircon-alone settings the user might use now
@@ -126,8 +126,8 @@ MAX_SETPOINT = 30  # °C, the highest setting on most remotes
 
 
 def set_value(tdb, v, met, clo):
-    """SET (°C); walls at air temperature; sitting posture (the SET model has
-    no lying option); limit_inputs=False so the sleeping case can run."""
+    """SET (°C). Walls at air temperature. Sitting posture (the SET model has
+    no lying option). limit_inputs=False so the sleeping case can run."""
     return set_tmp(tdb=tdb, tr=tdb, v=v, rh=RH, met=met, clo=clo, position="sitting",
                    limit_inputs=False, round_output=False).set
 
@@ -140,7 +140,7 @@ def fan_setpoint(base, v, met, clo):
 
 
 def pmv_ppd(tdb, v, met, clo):
-    """ASHRAE 55 PMV and PPD (%); the user controls the fan (airspeed_control=True)."""
+    """ASHRAE 55 PMV and PPD (%). The user controls the fan (airspeed_control=True)."""
     r = pmv_ppd_ashrae(tdb=tdb, tr=tdb, vr=v, rh=RH, met=met, clo=clo, airspeed_control=True,
                        limit_inputs=False, round_output=False)
     return r.pmv, r.ppd
@@ -155,7 +155,7 @@ HOURS = range(22, 30)  # 10 pm to 6 am (hours past midnight written as 24-29)
 UA, Q_INT, Q_LAT = 60, 250, 250  # W/K heat leak, W internal heat, W moisture load (as in folder 03)
 MASS_OFFSET = 2.0  # °C, warm concrete walls give off heat as if it were 2 °C hotter outside
 SYSTEMS = [("Older aircon (COP 3.5)", 3.5), ("New 5-tick aircon (COP 5.5)", 5.5)]
-FAN_PRICE = 350  # S$, a 52" DC ceiling fan bought and installed (ASSUMPTION; roughly S$250-450)
+FAN_PRICE = 350  # S$, a 52" DC ceiling fan bought and installed (ASSUMPTION, roughly S$250-450)
 
 
 import csv as _csv
@@ -402,7 +402,7 @@ END = 30.0  # 6 am (hours past midnight written as 24-30)
 PRECOOL_MIN = 30  # min, how early a "pre-cool" user switches on the aircon (e.g. by app or timer)
 SIT = (1.0, 0.4)  # (met, clo): the user is awake at first, sitting in T-shirt and shorts
 COMFORT_BASE = 25.0  # °C, the reference: aircon alone at 25 °C once the room has fully settled
-SET_TOLERANCE = 0.5  # °C: "comfortable" = SET within 0.5 °C of that settled reference (ASSUMPTION;
+SET_TOLERANCE = 0.5  # °C: "comfortable" = SET within 0.5 °C of that settled reference (ASSUMPTION,
 #                      a difference people barely notice)
 OFF_EARLY_MIN = 30  # min: in the "early off" case the aircon switches off this long before the
 #                     user wakes at 6 am (the fan keeps running)
@@ -421,7 +421,7 @@ def room_mass(room):
 def cooldown(room, setpoint, fan_on, start_hour, cop_25, off_hour=None, fan_w=None):
     """Simulate from start_hour to 6 am. If off_hour is given, the aircon switches
     off at that hour (the fan, if on, keeps running). fan_w = fan power (W) when
-    on; default FAN_W. Returns times (h), T_a and T_m lists (°C), and the aircon
+    on. Default FAN_W. Returns times (h), T_a and T_m lists (°C), and the aircon
     and fan electricity (kWh)."""
     c_a, c_m, g_in, g_out = room_mass(room)
     t_a = t_m = T_START
@@ -605,7 +605,7 @@ WINDOW = (ARRIVE - PRECOOL_MIN / 60 - 0.05, ARRIVE + 2.5)  # show about 9:30 pm 
 for (label, sp, fan_on, start, off), color in zip(COOL_CASES, CASE_COLORS):
     times, ta, tm, st, sets, mins, wt, wsets = runs[label]
     if off is not None:
-        continue  # identical to "fan + aircon" until 5:30 am; shown in the bottom panel instead
+        continue  # identical to "fan + aircon" until 5:30 am. Shown in the bottom panel instead
     ax_t.plot(times, ta, color=color, lw=2, label=label)
     ax_t.plot(times, tm, color=color, lw=1.2, ls=":")
     ax_s.plot(st, sets, color=color, lw=2)
@@ -699,12 +699,12 @@ print("Saved bedroom_cooldown.png")
 #       in the common bedroom (ASSUMPTION: air speed scales with fan speed).
 #     - a DC standing fan pointed at the bed, 4.5 W at 0.5 m/s (folder 12
 #       model: P = 3 + 12 v^3 W), and its uncapped 1.0 m/s / 15 W case.
-#     The system now controls the existing ceiling fan; the standing fan is
+#     The system now controls the existing ceiling fan. The standing fan is
 #     kept for comparison (backup slides).
 # (d) Humidity: 60 / 70 / 80 % RH (the aircon may dehumidify less at warm
 #     setpoints). The energy model keeps the moisture load fixed, so only the
 #     setpoint changes here.
-# (e) Posture: the SET model has no lying option; compare "sitting" (used)
+# (e) Posture: the SET model has no lying option. Compare "sitting" (used)
 #     with "standing" as a bracket.
 print("\nPart 3: review checks (common bedroom, asleep without covers, baseline 25 °C aircon alone)")
 room = ROOMS[0]
@@ -766,7 +766,7 @@ MASS_DEPTH = DEPTH_USED
 
 # (c) the 0.5 m/s sleep cap: ceiling fan (our system) and standing fan (comparison)
 print("\n(c) Sleep setting 0.85 m/s (ceiling fan), and a DC standing fan for comparison")
-SLEEP_V = 0.85  # m/s at the bed while asleep (design rule from 4 Nov 2026; was a 0.5 m/s cap)
+SLEEP_V = 0.85  # m/s at the bed while asleep (design rule from 4 Nov 2026, was a 0.5 m/s cap)
 CEIL_CAP_W = FAN_W * (SLEEP_V / room["v_user"]) ** 3  # W, fan law
 for check, label, v, fw in (
         ("c ceiling fan", f"ceiling fan at {SLEEP_V} m/s sleep setting, {CEIL_CAP_W:.1f} W", SLEEP_V, CEIL_CAP_W),

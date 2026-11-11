@@ -1,7 +1,7 @@
 """Review follow-up runs (2026-10-25).
 
 Two questions from the full-deck review, answered with the folder 12 evening model
-(same room, same evening, same comfort rule; nothing in folder 12 is changed):
+(same room, same evening, same comfort rule, nothing in folder 12 is changed):
 
   Q1. What does the camera itself save?
       Folder 12 compares our system (camera + fan) with aircon-only strategies, so
@@ -12,7 +12,7 @@ Two questions from the full-deck review, answered with the folder 12 evening mod
       cost-vs-comfort trade-off a no-camera system can reach.
 
   Q2. Does the saving survive whole-degree setpoints?
-      The optimiser picks setpoints like 26.07 °C or 29.76 °C; a real remote only
+      The optimiser picks setpoints like 26.07 °C or 29.76 °C. A real remote only
       takes 1 °C steps (some take 0.5 °C). We rerun our strategies with the
       setpoint rounded (a) to the nearest step and (b) down to the next step
       (cooler, the comfort-safe choice).
@@ -23,11 +23,11 @@ Variables (all from folder 12 unless stated)
   V_STILL     = 0.1 m/s, air speed with the fan off
   FAN_NO_CAM  = 0.5 m/s, fan speed of the no-camera strategies. ASSUMPTION: the
                 sleeping cap (noise), since without a camera the fan must be safe
-                for a sleeper all night; at 0.5 m/s it draws 4.5 W (assumed fan law
+                for a sleeper all night. At 0.5 m/s it draws 4.5 W (assumed fan law
                 P = 3 + 12 v^3 W, folder 12)
   FIXED_SPS   = 24-28 °C in 1 °C steps, the fixed setpoints swept for Q1
   STEP        = 1.0 or 0.5 °C, the remote's setpoint step for Q2
-  cop         = 3.5 (older aircon) or 5.5 (new 5-tick); results quoted for 3.5
+  cop         = 3.5 (older aircon) or 5.5 (new 5-tick). Results quoted for 3.5
   S$/yr       = kWh per night x TARIFF (S$0.3116/kWh) x 365 nights
   uncomfortable minutes = minutes the user is in the room with SET outside
                 KNOB ± TOL (too warm + too cold), SET from the real wall temperature
@@ -66,7 +66,7 @@ def load_folder12():
 
 m = load_folder12()
 # "python review_runs.py ceiling" reruns everything with the existing DC ceiling fan
-# (folder 12 reads the same command-line option); outputs get "_ceiling".
+# (folder 12 reads the same command-line option). Outputs get "_ceiling".
 SUFFIX = "_ceiling" if "ceiling" in sys.argv[1:] else ""
 FAN_NO_CAM = 0.5
 FIXED_SPS = [24.0, 25.0, 26.0, 27.0, 28.0]
@@ -84,7 +84,7 @@ def run(strategy, cop=COP):
 
 def rounded(strategy, step, mode):
     """Wrap a strategy so its setpoint is rounded to the remote's step.
-    mode 'nearest' = nearest step; 'down' = next step down (cooler, comfort-safe)."""
+    mode 'nearest' = nearest step, 'down' = next step down (cooler, comfort-safe)."""
     f = round if mode == "nearest" else math.floor
 
     def s(act, t_m, t_a=None):

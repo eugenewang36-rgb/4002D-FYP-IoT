@@ -3,7 +3,7 @@
 Same evening and room model as folder 12 (ceiling fan, real hourly temperatures, 13-minute sensor cycle).
 Case A: the household cools the sitting period as it does the rest of the evening (the report's headline case).
 Case B: the household would not cool the sitting period anyway: the aircon is OFF from 6 pm to 8:30 pm in every
-        strategy (fixed 25 C: no fan; fixed 26 C + 0.5 m/s fan: fan only; ours: aircon off, fan as chosen).
+        strategy (fixed 25 C: no fan, fixed 26 C + 0.5 m/s fan: fan only, ours: aircon off, fan as chosen).
 Strategies: fixed 25 C aircon only | fixed 26 C + 0.5 m/s fan, no camera | our system.
 Outputs: sitting_share.csv and the printed table.
 """

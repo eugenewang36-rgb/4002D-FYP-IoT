@@ -2,7 +2,7 @@
 
 Gross saving = fixed 25 C aircon-only bill minus our system's bill for the 6 pm to 6 am evening (folder 12, ceiling
 fan, real hourly Singapore temperatures, 13-minute sensor cycle). The values below are those printed by
-21_routine_addon (older aircon: ours S$288, fixed 25 C S$440; 5-tick: ours S$189, fixed S$280).
+21_routine_addon (older aircon: ours S$288, fixed 25 C S$440, 5-tick: ours S$189, fixed S$280).
 The controller runs all day, so its energy over a whole year is subtracted from the evening-only saving. That is
 conservative: the aircon bill it is compared with covers 6 pm to 6 am only.
 Every power value is an ASSUMPTION or a figure calculated in section 2.3.2, to be measured with USB power meters in
@@ -16,7 +16,7 @@ PSU = 1.15  # 15% power-supply loss
 
 
 def budget(pi_w, pi_hours=24):
-    """Average power (W) over 24 h. The Pi, camera and illuminator run pi_hours a day; the ESP32 boards run 24 h."""
+    """Average power (W) over 24 h. The Pi, camera and illuminator run pi_hours a day. The ESP32 boards run 24 h."""
     pi = pi_w * pi_hours / 24
     cam = 0.8 * pi_hours / 24
     ir = 1.5 * min(pi_hours, 12) / 24      # 1.5 W for the dark hours (12 h)
