@@ -1,0 +1,19 @@
+group,strategy,sgd_year_cop35,min_too_warm,min_too_cold,min_uncomfortable
+folder 12,"Aircon only, set for the workout (22 °C all night)",700.4,96,578,674
+folder 12,"Aircon only, fixed 25 °C",439.6,551,0,551
+folder 12,"Aircon only, changes with activity",480.0,476,0,476
+folder 12,Our system: activity-aware aircon + fan,288.4,100,28,128
+"Q1 fan, no camera",Fixed 24 °C + fan 0.5 m/s all evening,525.5,90,599,689
+"Q1 fan, no camera",Fixed 25 °C + fan 0.5 m/s all evening,442.7,90,599,689
+"Q1 fan, no camera",Fixed 26 °C + fan 0.5 m/s all evening,364.8,90,149,239
+"Q1 fan, no camera",Fixed 27 °C + fan 0.5 m/s all evening,291.8,540,149,689
+"Q1 fan, no camera",Fixed 28 °C + fan 0.5 m/s all evening,223.8,540,149,689
+"Q1 no fan, no camera","Fixed 24 °C, fan off",522.4,112,88,200
+"Q1 no fan, no camera","Fixed 25 °C, fan off",439.6,551,0,551
+"Q1 no fan, no camera","Fixed 26 °C, fan off",361.7,687,0,687
+"Q1 no fan, no camera","Fixed 27 °C, fan off",288.7,690,0,690
+"Q1 no fan, no camera","Fixed 28 °C, fan off",220.8,690,0,690
+Q2 1 °C steps,"Our system, setpoint rounded nearest",278.7,540,28,568
+Q2 1 °C steps,"Our system, setpoint rounded down",327.9,172,28,200
+Q2 0.5 °C steps,"Our system, setpoint rounded nearest",285.4,370,28,398
+Q2 0.5 °C steps,"Our system, setpoint rounded down",302.4,345,28,373

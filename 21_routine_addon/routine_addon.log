@@ -1,0 +1,59 @@
+Reference: the 6 pm to 6 am system as in folder 12 (unchanged)
+  Older aircon (COP 3.5): ours S$288/yr, fixed 25 °C S$440/yr, saving 34.4%, 128 uncomfortable min
+  New 5-tick aircon (COP 5.5): ours S$189/yr, fixed 25 °C S$280/yr, saving 32.6%, 128 uncomfortable min
+
+1. Pre-cooling: aircon starts before the 6 pm arrival (empty room, fan off)
+   Setpoint while the room is empty = the user's knob, 25 °C (older aircon). Energy counted from the start of pre-cooling.
+   ours                     pre-cool  0 min: S$ 288/yr (extra S$+0.0), first 30 min after arrival: 0 warm / 0 cool, whole evening 128 min
+   ours                     pre-cool 15 min: S$ 301/yr (extra S$+12.9), first 30 min after arrival: 15 warm / 1 cool, whole evening 154 min
+   ours                     pre-cool 30 min: S$ 314/yr (extra S$+26.0), first 30 min after arrival: 25 warm / 0 cool, whole evening 171 min
+   ours                     pre-cool 60 min: S$ 341/yr (extra S$+52.2), first 30 min after arrival: 19 warm / 1 cool, whole evening 140 min
+   fixed 25 °C aircon only  pre-cool  0 min: S$ 440/yr (extra S$+0.0), first 30 min after arrival: 11 warm / 0 cool, whole evening 551 min
+   fixed 25 °C aircon only  pre-cool 15 min: S$ 452/yr (extra S$+12.7), first 30 min after arrival: 7 warm / 0 cool, whole evening 547 min
+   fixed 25 °C aircon only  pre-cool 30 min: S$ 465/yr (extra S$+25.4), first 30 min after arrival: 1 warm / 0 cool, whole evening 541 min
+   fixed 25 °C aircon only  pre-cool 60 min: S$ 491/yr (extra S$+51.0), first 30 min after arrival: 0 warm / 0 cool, whole evening 540 min
+   Same 15-minute pre-cooling with a higher setpoint while the room is empty (older aircon):
+   ours                     15 min at 25 °C: extra S$+12.9/yr, first 30 min after arrival 15 warm / 1 cool, whole evening 154 min
+   ours                     15 min at 26 °C: extra S$+11.8/yr, first 30 min after arrival 15 warm / 0 cool, whole evening 149 min
+   ours                     15 min at 27 °C: extra S$+10.8/yr, first 30 min after arrival 15 warm / 0 cool, whole evening 127 min
+   ours                     15 min at 28 °C: extra S$+9.6/yr, first 30 min after arrival 0 warm / 1 cool, whole evening 100 min
+   fixed 25 °C aircon only  15 min at 25 °C: extra S$+12.7/yr, first 30 min after arrival 7 warm / 0 cool, whole evening 547 min
+   fixed 25 °C aircon only  15 min at 26 °C: extra S$+12.0/yr, first 30 min after arrival 9 warm / 0 cool, whole evening 549 min
+   fixed 25 °C aircon only  15 min at 27 °C: extra S$+11.2/yr, first 30 min after arrival 14 warm / 0 cool, whole evening 554 min
+   fixed 25 °C aircon only  15 min at 28 °C: extra S$+10.5/yr, first 30 min after arrival 19 warm / 0 cool, whole evening 559 min
+
+2. Pre-shutdown: aircon switched off before the 6 am departure (fan stays at its sleep speed)
+   The base system uses 30 min (aircon off at 5:30 am). Comfort is counted to 6 am here, not excluded.
+   Older aircon (COP 3.5): pre-shutdown  0 min: S$ 297/yr, whole night to 6 am 128 uncomfortable min (of which in the last 0 min: 0)
+   Older aircon (COP 3.5): pre-shutdown 15 min: S$ 293/yr, whole night to 6 am 142 uncomfortable min (of which in the last 15 min: 14)
+   Older aircon (COP 3.5): pre-shutdown 30 min: S$ 288/yr, whole night to 6 am 157 uncomfortable min (of which in the last 30 min: 29)
+   Older aircon (COP 3.5): pre-shutdown 45 min: S$ 284/yr, whole night to 6 am 172 uncomfortable min (of which in the last 45 min: 44)
+   Older aircon (COP 3.5): pre-shutdown 60 min: S$ 280/yr, whole night to 6 am 187 uncomfortable min (of which in the last 60 min: 59)
+   Older aircon (COP 3.5): pre-shutdown 90 min: S$ 270/yr, whole night to 6 am 216 uncomfortable min (of which in the last 90 min: 88)
+   New 5-tick aircon (COP 5.5): pre-shutdown  0 min: S$ 194/yr, whole night to 6 am 128 uncomfortable min (of which in the last 0 min: 0)
+   New 5-tick aircon (COP 5.5): pre-shutdown 15 min: S$ 191/yr, whole night to 6 am 142 uncomfortable min (of which in the last 15 min: 14)
+   New 5-tick aircon (COP 5.5): pre-shutdown 30 min: S$ 189/yr, whole night to 6 am 157 uncomfortable min (of which in the last 30 min: 29)
+   New 5-tick aircon (COP 5.5): pre-shutdown 45 min: S$ 186/yr, whole night to 6 am 172 uncomfortable min (of which in the last 45 min: 44)
+   New 5-tick aircon (COP 5.5): pre-shutdown 60 min: S$ 183/yr, whole night to 6 am 187 uncomfortable min (of which in the last 60 min: 59)
+   New 5-tick aircon (COP 5.5): pre-shutdown 90 min: S$ 177/yr, whole night to 6 am 216 uncomfortable min (of which in the last 90 min: 88)
+
+3. Occupancy shutdown: system off after 15 min with no occupant detected
+   Without the rule, the system keeps the last setting while the room is empty. 'Fixed 25 °C' keeps running.
+   Out of the bedroom 7:00-8:00 pm (while sitting) | Older aircon (COP 3.5)
+      ours, no rule: S$287/yr if every evening (2.52 kWh), 120 min | ours + 15-min rule: 2.51 kWh, 120 min | fixed 25 °C: 3.84 kWh, 551 min
+      rule saves 0.01 kWh (S$0.00 per such evening); extra uncomfortable minutes after return: 0
+   Out of the bedroom 7:00-8:00 pm (while sitting) | New 5-tick aircon (COP 5.5)
+      ours, no rule: S$188/yr if every evening (1.65 kWh), 120 min | ours + 15-min rule: 1.64 kWh, 120 min | fixed 25 °C: 2.44 kWh, 551 min
+      rule saves 0.01 kWh (S$0.00 per such evening); extra uncomfortable minutes after return: 0
+   Out 9:00-9:45 pm (workout interrupted) | Older aircon (COP 3.5)
+      ours, no rule: S$279/yr if every evening (2.46 kWh), 83 min | ours + 15-min rule: 2.35 kWh, 126 min | fixed 25 °C: 3.79 kWh, 506 min
+      rule saves 0.11 kWh (S$0.03 per such evening); extra uncomfortable minutes after return: 43
+   Out 9:00-9:45 pm (workout interrupted) | New 5-tick aircon (COP 5.5)
+      ours, no rule: S$183/yr if every evening (1.61 kWh), 83 min | ours + 15-min rule: 1.54 kWh, 126 min | fixed 25 °C: 2.41 kWh, 506 min
+      rule saves 0.07 kWh (S$0.02 per such evening); extra uncomfortable minutes after return: 43
+   Bedroom empty all night (10 pm-6 am) | Older aircon (COP 3.5)
+      ours, no rule: S$410/yr if every evening (3.60 kWh), 118 min | ours + 15-min rule: 1.16 kWh, 118 min | fixed 25 °C: 3.70 kWh, 101 min
+      rule saves 2.44 kWh (S$0.76 per such evening); extra uncomfortable minutes after return: 0
+   Bedroom empty all night (10 pm-6 am) | New 5-tick aircon (COP 5.5)
+      ours, no rule: S$271/yr if every evening (2.38 kWh), 118 min | ours + 15-min rule: 0.76 kWh, 118 min | fixed 25 °C: 2.35 kWh, 101 min
+      rule saves 1.63 kWh (S$0.51 per such evening); extra uncomfortable minutes after return: 0

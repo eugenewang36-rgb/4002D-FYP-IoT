@@ -1,0 +1,27 @@
+part,activity,met,clo,fan_m_s,fan_w,setpoint_C,steady_power_w_cop35,allowed,aircon,kwh_night,kwh_workout_hour,sgd_year,sleeping_avg_set_C,sitting_avg_set_C,exercising_avg_set_C,sleeping_min_too_warm,sitting_min_too_warm,exercising_min_too_warm,sleeping_min_too_cold,sitting_min_too_cold,exercising_min_too_cold,kwh_fixed25,kwh_matched_aircon_only,saving_vs_fixed25_pct,saving_vs_matched_pct
+1 setpoint,Sleeping,0.7,0.9,0.1,0.0,24.52,240,True,,,,,,,,,,,,,,,,,
+1 setpoint,Sleeping,0.7,0.9,0.5,4.5,26.07,205,True,,,,,,,,,,,,,,,,,
+1 setpoint,Sleeping,0.7,0.9,1.0,15.0,26.78,201,False,,,,,,,,,,,,,,,,,
+1 setpoint,Sleeping,0.7,0.9,1.5,43.5,27.14,229,False,,,,,,,,,,,,,,,,,
+1 setpoint,Sitting,1.0,0.4,0.1,0.0,26.34,201,True,,,,,,,,,,,,,,,,,
+1 setpoint,Sitting,1.0,0.4,0.5,4.5,28.72,152,True,,,,,,,,,,,,,,,,,
+1 setpoint,Sitting,1.0,0.4,1.0,15.0,29.76,143,True,,,,,,,,,,,,,,,,,
+1 setpoint,Sitting,1.0,0.4,1.5,43.5,30.0,174,True,,,,,,,,,,,,,,,,,
+1 setpoint,Exercising,3.5,0.36,0.1,0.0,22.19,400,True,,,,,,,,,,,,,,,,,
+1 setpoint,Exercising,3.5,0.36,0.5,4.5,22.19,406,True,,,,,,,,,,,,,,,,,
+1 setpoint,Exercising,3.5,0.36,1.0,15.0,22.49,409,True,,,,,,,,,,,,,,,,,
+1 setpoint,Exercising,3.5,0.36,1.5,43.5,24.04,396,True,,,,,,,,,,,,,,,,,
+2 evening,"Aircon only, set for the workout (22 °C all night)",,,,,,,,Older aircon (COP 3.5),6.158,1.038,700.38,23.43,23.53,25.6,0,10,86,450,128,0,,,,
+2 evening,"Aircon only, set for the workout (22 °C all night)",,,,,,,,New 5-tick aircon (COP 5.5),3.919,0.66,445.69,23.43,23.53,25.6,0,10,86,450,128,0,,,,
+2 evening,"Aircon only, fixed 25 °C",,,,,,,,Older aircon (COP 3.5),3.865,0.65,439.61,25.99,25.14,27.95,450,11,90,0,0,0,,,,
+2 evening,"Aircon only, fixed 25 °C",,,,,,,,New 5-tick aircon (COP 5.5),2.46,0.414,279.75,25.99,25.14,27.95,450,11,90,0,0,0,,,,
+2 evening,"Aircon only, changes with activity",,,,,,,,Older aircon (COP 3.5),4.22,1.304,480.0,25.54,26.03,26.38,236,150,90,0,0,0,,,,
+2 evening,"Aircon only, changes with activity",,,,,,,,New 5-tick aircon (COP 5.5),2.686,0.83,305.46,25.54,26.03,26.38,236,150,90,0,0,0,,,,
+2 evening,Our system: activity-aware aircon + fan,,,,,,,,Older aircon (COP 3.5),2.834,1.055,322.28,25.56,24.71,26.85,286,0,90,0,67,0,,,,
+2 evening,Our system: activity-aware aircon + fan,,,,,,,,New 5-tick aircon (COP 5.5),1.85,0.695,210.37,25.56,24.71,26.85,286,0,90,0,67,0,,,,
+3 per activity,Sleeping,,,,,,,,Older aircon (COP 3.5),1.752,,,,,,,,,,,,2.008,2.068,12.7,15.3
+3 per activity,Sitting,,,,,,,,Older aircon (COP 3.5),0.027,,,,,,,,,,,,1.207,0.848,97.8,96.8
+3 per activity,Exercising,,,,,,,,Older aircon (COP 3.5),1.055,,,,,,,,,,,,0.65,1.304,-62.3,19.1
+3 per activity,Sleeping,,,,,,,,New 5-tick aircon (COP 5.5),1.128,,,,,,,,,,,,1.278,1.316,11.7,14.3
+3 per activity,Sitting,,,,,,,,New 5-tick aircon (COP 5.5),0.027,,,,,,,,,,,,0.768,0.54,96.5,95.0
+3 per activity,Exercising,,,,,,,,New 5-tick aircon (COP 5.5),0.695,,,,,,,,,,,,0.414,0.83,-68.0,16.2

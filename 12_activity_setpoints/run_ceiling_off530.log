@@ -1,0 +1,67 @@
+Part 1: knob = feels like 25.0 °C (target SET), 60% RH
+
+Sleeping (0.7 met, 0.9 clo), fan allowed up to 0.85 m/s
+  fan 0.1 m/s ( 0.0 W): setpoint 24.5 °C, steady power  240 W (older aircon)
+  fan 0.5 m/s ( 1.8 W): setpoint 26.1 °C, steady power  202 W (older aircon)
+  fan 0.8 m/s ( 8.7 W): setpoint 26.6 °C, steady power  197 W (older aircon)
+  fan 1.2 m/s (25.0 W): setpoint 27.0 °C, steady power  210 W (older aircon)  [over the fan cap]
+  -> lowest power: 26.6 °C with fan 0.85 m/s
+
+Sitting (1.0 met, 0.4 clo), fan allowed up to 1.21 m/s
+  fan 0.1 m/s ( 0.0 W): setpoint 26.3 °C, steady power  201 W (older aircon)
+  fan 0.5 m/s ( 1.8 W): setpoint 28.7 °C, steady power  148 W (older aircon)
+  fan 0.8 m/s ( 8.7 W): setpoint 29.5 °C, steady power  140 W (older aircon)
+  fan 1.2 m/s (25.0 W): setpoint 30.0 °C, steady power  151 W (older aircon)
+  -> lowest power: 29.5 °C with fan 0.85 m/s
+
+Exercising (3.5 met, 0.36 clo), fan allowed up to 1.21 m/s
+  fan 0.1 m/s ( 0.0 W): setpoint 22.2 °C, steady power  400 W (older aircon)
+  fan 0.5 m/s ( 1.8 W): setpoint 22.2 °C, steady power  402 W (older aircon)
+  fan 0.8 m/s ( 8.7 W): setpoint 22.2 °C, steady power  411 W (older aircon)
+  fan 1.2 m/s (25.0 W): setpoint 23.2 °C, steady power  397 W (older aircon)
+  -> lowest power: 23.2 °C with fan 1.21 m/s
+
+Rules: workout 25.0 °C + fan 1.21 m/s; sleep fan 0.85 m/s at 26.62 °C, target SET +0.05 °C/h up to +0.4; wake ramp to SET 27.0 °C over the last 30 min
+
+Part 2: evening in a common bedroom (8 pm desk, 8:30 pm workout, 10 pm sleep, until 6 am)
+Room and walls start at 28.44 °C
+
+Aircon only, set for the workout (22 °C all night)
+  Sleeping: avg SET 23.4 °C, 0 min too warm, 450 min too cold · Sitting: avg SET 23.5 °C, 10 min too warm, 128 min too cold · Exercising: avg SET 25.6 °C, 86 min too warm, 0 min too cold
+  Older aircon (COP 3.5): 6.16 kWh/night (workout hour 1.04) = S$700/yr
+  New 5-tick aircon (COP 5.5): 3.92 kWh/night (workout hour 0.66) = S$446/yr
+
+Aircon only, fixed 25 °C
+  Sleeping: avg SET 26.0 °C, 450 min too warm, 0 min too cold · Sitting: avg SET 25.1 °C, 11 min too warm, 0 min too cold · Exercising: avg SET 28.0 °C, 90 min too warm, 0 min too cold
+  Older aircon (COP 3.5): 3.87 kWh/night (workout hour 0.65) = S$440/yr
+  New 5-tick aircon (COP 5.5): 2.46 kWh/night (workout hour 0.41) = S$280/yr
+
+Aircon only, changes with activity
+  Sleeping: avg SET 25.5 °C, 236 min too warm, 0 min too cold · Sitting: avg SET 26.0 °C, 150 min too warm, 0 min too cold · Exercising: avg SET 26.4 °C, 90 min too warm, 0 min too cold
+  Older aircon (COP 3.5): 4.22 kWh/night (workout hour 1.30) = S$480/yr
+  New 5-tick aircon (COP 5.5): 2.69 kWh/night (workout hour 0.83) = S$305/yr
+
+Our system: activity-aware aircon + fan
+  Sleeping: avg SET 25.4 °C, 5 min too warm, 0 min too cold · Sitting: avg SET 24.7 °C, 0 min too warm, 33 min too cold · Exercising: avg SET 27.6 °C, 90 min too warm, 0 min too cold
+  Older aircon (COP 3.5): 2.54 kWh/night (workout hour 1.02) = S$289/yr
+  New 5-tick aircon (COP 5.5): 1.66 kWh/night (workout hour 0.66) = S$189/yr
+
+Older aircon (COP 3.5): 'Our system: activity-aware aircon + fan' vs 'Aircon only, set for the workout (22 °C all night)': saves 3.62 kWh/night = S$412/yr (59%)
+Older aircon (COP 3.5): 'Our system: activity-aware aircon + fan' vs 'Aircon only, fixed 25 °C': saves 1.33 kWh/night = S$151/yr (34%)
+Older aircon (COP 3.5): 'Our system: activity-aware aircon + fan' vs 'Aircon only, changes with activity': saves 1.68 kWh/night = S$191/yr (40%)
+New 5-tick aircon (COP 5.5): 'Our system: activity-aware aircon + fan' vs 'Aircon only, set for the workout (22 °C all night)': saves 2.26 kWh/night = S$257/yr (58%)
+New 5-tick aircon (COP 5.5): 'Our system: activity-aware aircon + fan' vs 'Aircon only, fixed 25 °C': saves 0.80 kWh/night = S$91/yr (33%)
+New 5-tick aircon (COP 5.5): 'Our system: activity-aware aircon + fan' vs 'Aircon only, changes with activity': saves 1.03 kWh/night = S$117/yr (38%)
+
+Part 3: saving for each activity (our system vs aircon alone)
+  Older aircon (COP 3.5), Sleeping: ours 1.501 kWh, fixed 25 °C 2.008 (+25% saving), aircon set for the same comfort 2.068 (+27% saving)
+  Older aircon (COP 3.5), Sitting: ours 0.018 kWh, fixed 25 °C 1.207 (+99% saving), aircon set for the same comfort 0.848 (+98% saving)
+  Older aircon (COP 3.5), Exercising: ours 1.019 kWh, fixed 25 °C 0.650 (-57% saving), aircon set for the same comfort 1.304 (+22% saving)
+  New 5-tick aircon (COP 5.5), Sleeping: ours 0.980 kWh, fixed 25 °C 1.278 (+23% saving), aircon set for the same comfort 1.316 (+26% saving)
+  New 5-tick aircon (COP 5.5), Sitting: ours 0.018 kWh, fixed 25 °C 0.768 (+98% saving), aircon set for the same comfort 0.540 (+97% saving)
+  New 5-tick aircon (COP 5.5), Exercising: ours 0.662 kWh, fixed 25 °C 0.414 (-60% saving), aircon set for the same comfort 0.830 (+20% saving)
+
+Saved activity_results_ceiling.csv
+Saved activity_setpoints_ceiling.png
+Saved activity_evening_ceiling.png
+finished

@@ -1,0 +1,37 @@
+fan,case,aircon,pi_w,fixed25_sgd,ours_sgd,gross_pct,controller_sgd,net_sgd,net_pct,uncomfortable_min
+25 W (base),A sitting cooled as usual,Older aircon (COP 3.5),3,439.6,288.4,34.4,17.2,134.0,30.5,128
+25 W (base),A sitting cooled as usual,Older aircon (COP 3.5),5,439.6,288.4,34.4,23.5,127.7,29.0,128
+25 W (base),A sitting cooled as usual,Older aircon (COP 3.5),8,439.6,288.4,34.4,32.9,118.3,26.9,128
+25 W (base),A sitting cooled as usual,New 5-tick aircon (COP 5.5),3,279.8,188.6,32.6,17.2,73.9,26.4,128
+25 W (base),A sitting cooled as usual,New 5-tick aircon (COP 5.5),5,279.8,188.6,32.6,23.5,67.6,24.2,128
+25 W (base),A sitting cooled as usual,New 5-tick aircon (COP 5.5),8,279.8,188.6,32.6,32.9,58.2,20.8,128
+25 W (base),B sitting not cooled,Older aircon (COP 3.5),3,391.5,288.4,26.3,17.2,85.9,21.9,128
+25 W (base),B sitting not cooled,Older aircon (COP 3.5),5,391.5,288.4,26.3,23.5,79.6,20.3,128
+25 W (base),B sitting not cooled,Older aircon (COP 3.5),8,391.5,288.4,26.3,32.9,70.2,17.9,128
+25 W (base),B sitting not cooled,New 5-tick aircon (COP 5.5),3,249.2,188.6,24.3,17.2,43.3,17.4,128
+25 W (base),B sitting not cooled,New 5-tick aircon (COP 5.5),5,249.2,188.6,24.3,23.5,37.0,14.9,128
+25 W (base),B sitting not cooled,New 5-tick aircon (COP 5.5),8,249.2,188.6,24.3,32.9,27.6,11.1,128
+50 W,A sitting cooled as usual,Older aircon (COP 3.5),3,439.7,305.8,30.4,17.2,116.6,26.5,124
+50 W,A sitting cooled as usual,Older aircon (COP 3.5),5,439.7,305.8,30.4,23.5,110.3,25.1,124
+50 W,A sitting cooled as usual,Older aircon (COP 3.5),8,439.7,305.8,30.4,32.9,100.9,23.0,124
+50 W,A sitting cooled as usual,New 5-tick aircon (COP 5.5),3,279.8,204.7,26.8,17.2,57.8,20.7,124
+50 W,A sitting cooled as usual,New 5-tick aircon (COP 5.5),5,279.8,204.7,26.8,23.5,51.5,18.4,124
+50 W,A sitting cooled as usual,New 5-tick aircon (COP 5.5),8,279.8,204.7,26.8,32.9,42.1,15.1,124
+50 W,B sitting not cooled,Older aircon (COP 3.5),3,391.6,305.8,21.9,17.2,68.5,17.5,124
+50 W,B sitting not cooled,Older aircon (COP 3.5),5,391.6,305.8,21.9,23.5,62.2,15.9,124
+50 W,B sitting not cooled,Older aircon (COP 3.5),8,391.6,305.8,21.9,32.9,52.8,13.5,124
+50 W,B sitting not cooled,New 5-tick aircon (COP 5.5),3,249.2,204.7,17.8,17.2,27.2,10.9,124
+50 W,B sitting not cooled,New 5-tick aircon (COP 5.5),5,249.2,204.7,17.8,23.5,20.9,8.4,124
+50 W,B sitting not cooled,New 5-tick aircon (COP 5.5),8,249.2,204.7,17.8,32.9,11.5,4.6,124
+"50 W with 4,600 CFM datasheet airflow",A sitting cooled as usual,Older aircon (COP 3.5),3,439.7,305.8,30.4,17.2,116.6,26.5,254
+"50 W with 4,600 CFM datasheet airflow",A sitting cooled as usual,Older aircon (COP 3.5),5,439.7,305.8,30.4,23.5,110.3,25.1,254
+"50 W with 4,600 CFM datasheet airflow",A sitting cooled as usual,Older aircon (COP 3.5),8,439.7,305.8,30.4,32.9,100.9,23.0,254
+"50 W with 4,600 CFM datasheet airflow",A sitting cooled as usual,New 5-tick aircon (COP 5.5),3,279.8,204.7,26.8,17.2,57.8,20.7,254
+"50 W with 4,600 CFM datasheet airflow",A sitting cooled as usual,New 5-tick aircon (COP 5.5),5,279.8,204.7,26.8,23.5,51.5,18.4,254
+"50 W with 4,600 CFM datasheet airflow",A sitting cooled as usual,New 5-tick aircon (COP 5.5),8,279.8,204.7,26.8,32.9,42.1,15.1,254
+"50 W with 4,600 CFM datasheet airflow",B sitting not cooled,Older aircon (COP 3.5),3,391.6,305.8,21.9,17.2,68.5,17.5,254
+"50 W with 4,600 CFM datasheet airflow",B sitting not cooled,Older aircon (COP 3.5),5,391.6,305.8,21.9,23.5,62.2,15.9,254
+"50 W with 4,600 CFM datasheet airflow",B sitting not cooled,Older aircon (COP 3.5),8,391.6,305.8,21.9,32.9,52.8,13.5,254
+"50 W with 4,600 CFM datasheet airflow",B sitting not cooled,New 5-tick aircon (COP 5.5),3,249.2,204.7,17.8,17.2,27.2,10.9,254
+"50 W with 4,600 CFM datasheet airflow",B sitting not cooled,New 5-tick aircon (COP 5.5),5,249.2,204.7,17.8,23.5,20.9,8.4,254
+"50 W with 4,600 CFM datasheet airflow",B sitting not cooled,New 5-tick aircon (COP 5.5),8,249.2,204.7,17.8,32.9,11.5,4.6,254

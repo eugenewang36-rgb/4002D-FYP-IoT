@@ -1,0 +1,11 @@
+case,name,too_warm_min,too_cold_min,uncomfortable_min,Older aircon (COP 3.5) kWh,Older aircon (COP 3.5) S$/yr,New 5-tick aircon (COP 5.5) kWh,New 5-tick aircon (COP 5.5) S$/yr,A_min_too_warm,B_min_too_cold,B_min_too_warm,A_avg_SET,B_avg_SET
+arm,"Aircon only, set for the workout (22 °C all night)",96,578,674,6.158,700.4,3.919,445.7,,,,,
+arm,"Aircon only, fixed 25 °C",551,0,551,3.865,439.6,2.46,279.8,,,,,
+arm,"Aircon only, changes with activity",476,0,476,4.22,480.0,2.686,305.5,,,,,
+arm,Our system: activity-aware aircon + fan,100,28,128,2.536,288.4,1.658,188.6,,,,,
+arm,"Comfort-optimised, no activity detection",530,28,558,0.574,65.3,0.449,51.0,,,,,
+occupants same activity,1 people,100,28,128,2.536,288.4,1.658,188.6,,,,,
+occupants same activity,2 people,100,6,106,2.873,326.8,1.874,213.1,,,,,
+occupants same activity,3 people,100,6,106,3.222,366.5,2.102,239.0,,,,,
+"two people, A works out and B studies",settings follow the most active person (A),,,,2.764,314.4,1.805,205.2,90,89,0,27.64,20.72
+"two people, A works out and B studies",settings follow the least active person (B),,,,2.396,272.5,1.57,178.5,90,8,5,31.08,24.89

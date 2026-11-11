@@ -1,0 +1,11 @@
+scenario,aircon,ours_sgd,fixed25_sgd,saving_pct,uncomfortable_min
+No errors,Older aircon (COP 3.5),288.4,439.6,34.4,128
+No errors,New 5-tick aircon (COP 5.5),188.6,279.8,32.6,128
+Sleeping read as sitting (first 15% of the night),Older aircon (COP 3.5),272.6,439.6,38.0,229
+Sleeping read as sitting (first 15% of the night),New 5-tick aircon (COP 5.5),178.2,279.8,36.3,229
+Exercising read as sitting (first 15% of the workout),Older aircon (COP 3.5),280.4,439.6,36.2,129
+Exercising read as sitting (first 15% of the workout),New 5-tick aircon (COP 5.5),183.3,279.8,34.5,129
+Sitting read as sleeping (first 15% of the sitting period),Older aircon (COP 3.5),294.8,439.6,32.9,170
+Sitting read as sleeping (first 15% of the sitting period),New 5-tick aircon (COP 5.5),192.4,279.8,31.2,170
+All three errors together,Older aircon (COP 3.5),271.1,439.6,38.3,274
+All three errors together,New 5-tick aircon (COP 5.5),176.8,279.8,36.8,274

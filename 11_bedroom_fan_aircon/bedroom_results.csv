@@ -1,0 +1,21 @@
+room,aircon,cop_at_25C,open_area_m2,v_user_m_s,baseline_setpoint_C,fan_setpoint_C,aircon_only_kwh_yr,aircon_with_fan_kwh_yr,fan_kwh_yr,aircon_saved_kwh_yr,net_saved_kwh_yr,net_saved_pct,net_saved_sgd_yr,payback_years
+Common bedroom,Older aircon (COP 3.5),3.5,8.1,1.21,22,24.81,859.7,626.5,73.0,233.2,160.2,18.6,49.92,7.0
+Common bedroom,Older aircon (COP 3.5),3.5,8.1,1.21,23,25.65,772.7,563.6,73.0,209.1,136.1,17.6,42.42,8.3
+Common bedroom,Older aircon (COP 3.5),3.5,8.1,1.21,24,26.5,690.2,503.0,73.0,187.2,114.2,16.5,35.58,9.8
+Common bedroom,Older aircon (COP 3.5),3.5,8.1,1.21,25,27.36,612.2,445.1,73.0,167.1,94.1,15.4,29.32,11.9
+Common bedroom,Older aircon (COP 3.5),3.5,8.1,1.21,26,28.22,538.5,390.5,73.0,148.0,75.0,13.9,23.38,15.0
+Common bedroom,New 5-tick aircon (COP 5.5),5.5,8.1,1.21,22,24.81,547.1,398.7,73.0,148.4,75.4,13.8,23.5,14.9
+Common bedroom,New 5-tick aircon (COP 5.5),5.5,8.1,1.21,23,25.65,491.7,358.6,73.0,133.1,60.1,12.2,18.72,18.7
+Common bedroom,New 5-tick aircon (COP 5.5),5.5,8.1,1.21,24,26.5,439.2,320.1,73.0,119.1,46.1,10.5,14.37,24.4
+Common bedroom,New 5-tick aircon (COP 5.5),5.5,8.1,1.21,25,27.36,389.6,283.2,73.0,106.3,33.3,8.6,10.39,33.7
+Common bedroom,New 5-tick aircon (COP 5.5),5.5,8.1,1.21,26,28.22,342.7,248.5,73.0,94.2,21.2,6.2,6.61,53.0
+Master bedroom,Older aircon (COP 3.5),3.5,11.56,1.08,22,24.69,859.7,635.6,73.0,224.1,151.1,17.6,47.08,7.4
+Master bedroom,Older aircon (COP 3.5),3.5,11.56,1.08,23,25.54,772.7,571.7,73.0,201.0,128.0,16.6,39.87,8.8
+Master bedroom,Older aircon (COP 3.5),3.5,11.56,1.08,24,26.4,690.2,510.4,73.0,179.8,106.8,15.5,33.29,10.5
+Master bedroom,Older aircon (COP 3.5),3.5,11.56,1.08,25,27.26,612.2,451.6,73.0,160.6,87.6,14.3,27.28,12.8
+Master bedroom,Older aircon (COP 3.5),3.5,11.56,1.08,26,28.13,538.5,396.3,73.0,142.2,69.2,12.9,21.57,16.2
+Master bedroom,New 5-tick aircon (COP 5.5),5.5,11.56,1.08,22,24.69,547.1,404.5,73.0,142.6,69.6,12.7,21.69,16.1
+Master bedroom,New 5-tick aircon (COP 5.5),5.5,11.56,1.08,23,25.54,491.7,363.8,73.0,127.9,54.9,11.2,17.1,20.5
+Master bedroom,New 5-tick aircon (COP 5.5),5.5,11.56,1.08,24,26.4,439.2,324.8,73.0,114.4,41.4,9.4,12.92,27.1
+Master bedroom,New 5-tick aircon (COP 5.5),5.5,11.56,1.08,25,27.26,389.6,287.4,73.0,102.2,29.2,7.5,9.09,38.5
+Master bedroom,New 5-tick aircon (COP 5.5),5.5,11.56,1.08,26,28.13,342.7,252.2,73.0,90.5,17.5,5.1,5.45,64.2

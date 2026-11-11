@@ -1,0 +1,5 @@
+scenario,aircon,ours_sgd_year,fixed25_sgd_year,saving_vs_fixed25_pct,saving_vs_matched_pct,ours_uncomfortable_min,fixed25_uncomfortable_min,sitting_saving_vs_fixed25_pct,exercising_saving_vs_fixed25_pct,sleeping_saving_vs_fixed25_pct
+Story evening: home 8 pm,Older aircon (COP 3.5),301,412,27.1,34.7,91,570,90.3,-16.9,34.6
+Story evening: home 8 pm,New 5-tick aircon (COP 5.5),196,262,25.3,33.2,91,570,89.6,-19.3,32.9
+Longer study: home 6 pm,Older aircon (COP 3.5),333,469,29.0,34.6,111,595,81.5,-53.9,22.8
+Longer study: home 6 pm,New 5-tick aircon (COP 5.5),217,299,27.3,32.9,111,595,80.6,-57.0,20.9

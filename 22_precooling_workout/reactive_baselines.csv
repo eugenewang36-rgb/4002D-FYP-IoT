@@ -1,0 +1,9 @@
+strategy,aircon,kwh_evening,sgd_year,warm_min,cold_min
+"Aircon only, set for the workout (22 °C all night)",Older aircon (COP 3.5),6.158,700.4,96,578
+"Aircon only, set for the workout (22 °C all night)",New 5-tick aircon (COP 5.5),3.919,445.7,96,578
+"Aircon only, fixed 25 °C",Older aircon (COP 3.5),3.865,439.6,551,0
+"Aircon only, fixed 25 °C",New 5-tick aircon (COP 5.5),2.46,279.8,551,0
+"Aircon only, changes with activity",Older aircon (COP 3.5),4.22,480.0,476,0
+"Aircon only, changes with activity",New 5-tick aircon (COP 5.5),2.686,305.5,476,0
+Our system: activity-aware aircon + fan,Older aircon (COP 3.5),2.536,288.4,100,28
+Our system: activity-aware aircon + fan,New 5-tick aircon (COP 5.5),1.658,188.6,100,28

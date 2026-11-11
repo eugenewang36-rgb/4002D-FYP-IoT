@@ -1,0 +1,25 @@
+case,aircon,kwh_evening,sgd_year,extra_pct,exercising_warm,exercising_cold,sitting_warm,sitting_cold,sleeping_warm,sleeping_cold,uncomfortable_total
+Reactive (no pre-cool),Older aircon (COP 3.5),2.536,288.4,0.0,90,0,0,28,10,0,128
+Reactive (no pre-cool),New 5-tick aircon (COP 5.5),1.658,188.6,0.0,90,0,0,28,10,0,128
+Arrival pre-cool 15 min (26 °C),Older aircon (COP 3.5),2.64,300.2,4.1,90,0,15,24,20,0,149
+Arrival pre-cool 15 min (26 °C),New 5-tick aircon (COP 5.5),1.723,195.9,3.9,90,0,15,24,20,0,149
+Arrival pre-cool 30 min (26 °C),Older aircon (COP 3.5),2.743,312.0,8.2,90,0,10,29,20,0,149
+Arrival pre-cool 30 min (26 °C),New 5-tick aircon (COP 5.5),1.789,203.4,7.9,90,0,10,29,20,0,149
+Arrival pre-cool 60 min (26 °C),Older aircon (COP 3.5),2.952,335.8,16.4,90,0,20,31,15,0,156
+Arrival pre-cool 60 min (26 °C),New 5-tick aircon (COP 5.5),1.921,218.5,15.9,90,0,20,31,15,0,156
+Workout pre-cool 15 min (25 °C),Older aircon (COP 3.5),2.589,294.5,2.1,90,0,0,42,10,0,142
+Workout pre-cool 15 min (25 °C),New 5-tick aircon (COP 5.5),1.692,192.4,2.0,90,0,0,42,10,0,142
+Workout pre-cool 30 min (25 °C),Older aircon (COP 3.5),2.638,300.1,4.0,90,0,0,57,10,0,157
+Workout pre-cool 30 min (25 °C),New 5-tick aircon (COP 5.5),1.723,196.0,3.9,90,0,0,57,10,0,157
+Workout pre-cool 60 min (25 °C),Older aircon (COP 3.5),2.733,310.8,7.8,90,0,0,87,10,0,187
+Workout pre-cool 60 min (25 °C),New 5-tick aircon (COP 5.5),1.784,202.9,7.5,90,0,0,87,10,0,187
+Workout pre-cool 90 min (25 °C),Older aircon (COP 3.5),2.821,320.9,11.2,90,0,0,110,20,0,220
+Workout pre-cool 90 min (25 °C),New 5-tick aircon (COP 5.5),1.839,209.2,10.9,90,0,0,110,20,0,220
+"Workout pre-cool 30 min (23 °C, colder)",Older aircon (COP 3.5),2.653,301.8,4.6,90,0,0,57,10,0,157
+"Workout pre-cool 30 min (23 °C, colder)",New 5-tick aircon (COP 5.5),1.733,197.1,4.5,90,0,0,57,10,0,157
+"Workout pre-cool 60 min (23 °C, colder)",Older aircon (COP 3.5),2.804,318.9,10.6,90,0,0,87,20,0,197
+"Workout pre-cool 60 min (23 °C, colder)",New 5-tick aircon (COP 5.5),1.828,207.9,10.2,90,0,0,87,20,0,197
+"Workout pre-cool 90 min (23 °C, colder)",Older aircon (COP 3.5),2.946,335.0,16.2,90,0,0,110,17,0,217
+"Workout pre-cool 90 min (23 °C, colder)",New 5-tick aircon (COP 5.5),1.919,218.2,15.7,90,0,0,110,17,0,217
+Both: arrival 30 min + workout 30 min,Older aircon (COP 3.5),2.844,323.4,12.1,90,0,10,58,20,0,178
+Both: arrival 30 min + workout 30 min,New 5-tick aircon (COP 5.5),1.853,210.7,11.7,90,0,10,58,20,0,178

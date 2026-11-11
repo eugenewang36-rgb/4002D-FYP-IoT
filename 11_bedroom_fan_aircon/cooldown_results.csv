@@ -1,0 +1,9 @@
+room,case,aircon,setpoint_C,fan_on,aircon_on_at_h,aircon_off_at_h,minutes_to_comfort_after_arrival,max_sleep_set_last_30min_C,minutes_above_sleep_limit_last_30min,aircon_kwh_night,fan_kwh_night,total_kwh_night,total_sgd_year
+Common bedroom,"Aircon alone, on at arrival (25 °C)",Older aircon (COP 3.5),25.0,False,22.0,6.0,300.0,25.97,0,3.016,0.0,3.016,342.99
+Common bedroom,"Aircon alone, on at arrival (25 °C)",New 5-tick aircon (COP 5.5),25.0,False,22.0,6.0,300.0,25.97,0,1.919,0.0,1.919,218.26
+Common bedroom,"Aircon alone, pre-cooled 30 min (25 °C)",Older aircon (COP 3.5),25.0,False,21.5,6.0,272.0,25.94,0,3.143,0.0,3.143,357.45
+Common bedroom,"Aircon alone, pre-cooled 30 min (25 °C)",New 5-tick aircon (COP 5.5),25.0,False,21.5,6.0,272.0,25.94,0,2.0,0.0,2.0,227.47
+Common bedroom,"Fan + aircon, on at arrival (27.4 °C)",Older aircon (COP 3.5),27.36,True,22.0,6.0,0.0,25.6,0,1.797,0.2,1.997,227.09
+Common bedroom,"Fan + aircon, on at arrival (27.4 °C)",New 5-tick aircon (COP 5.5),27.36,True,22.0,6.0,0.0,25.6,0,1.143,0.2,1.343,152.78
+Common bedroom,"Fan + aircon, aircon off at 5:30 am (27.4 °C)",Older aircon (COP 3.5),27.36,True,22.0,5.5,0.0,26.42,14,1.711,0.2,1.911,217.4
+Common bedroom,"Fan + aircon, aircon off at 5:30 am (27.4 °C)",New 5-tick aircon (COP 5.5),27.36,True,22.0,5.5,0.0,26.42,14,1.089,0.2,1.289,146.62

@@ -1,0 +1,16 @@
+case,ours S$/yr older,fixed25 S$/yr older,saving % older,ours S$/yr 5-tick,fixed25 S$/yr 5-tick,saving % 5-tick,uncomfortable min (ours),uncomfortable min (fixed 25 °C)
+Base case,288.4,439.6,34.4,188.6,279.8,32.6,128,551
+UA 40 W/K (leakier envelope less),280.5,421.7,33.5,183.5,268.3,31.6,136,551
+UA 90 W/K,300.8,467.8,35.7,196.5,297.7,34.0,118,552
+Other internal heat x0.5,224.5,357.8,37.3,147.5,227.7,35.2,120,551
+Other internal heat x1.5,351.7,521.4,32.5,229.2,331.8,30.9,101,552
+Warm-wall offset 0 °C,258.5,405.3,36.2,169.5,257.9,34.3,152,550
+Warm-wall offset 4 °C,318.0,474.0,32.9,207.4,301.6,31.2,270,553
+Fan power on high 50 W,305.8,439.7,30.4,204.7,279.8,26.8,124,551
+Fan power on high 66 W,317.0,439.7,27.9,215.1,279.8,23.1,122,551
+Start temperature 29.1 °C,317.0,469.2,32.4,208.1,298.6,30.3,171,595
+Air speed at desk and workout spot x0.7,288.4,439.6,34.4,188.6,279.8,32.6,136,551
+Air speed at desk and workout spot x0.5,288.4,439.6,34.4,188.6,279.8,32.6,250,551
+Room humidity 80%,288.4,439.6,34.4,188.6,279.8,32.6,653,652
+Sitting at 1.2 met,293.2,441.3,33.6,192.8,280.8,31.3,114,549
+Radiant temperature 1.5 °C above the wall model,288.4,439.6,34.4,188.6,279.8,32.6,574,690

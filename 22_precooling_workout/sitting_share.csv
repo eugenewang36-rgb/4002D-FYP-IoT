@@ -1,0 +1,13 @@
+case,aircon,strategy,kwh_evening,sgd_year,saving_vs_fixed25_pct,uncomfortable_min
+A: sitting period cooled as usual,Older aircon (COP 3.5),Fixed 25 C aircon only,3.865,439.6,0.0,551
+A: sitting period cooled as usual,Older aircon (COP 3.5),"Fixed 26 C + 0.5 m/s fan, no camera",3.207,364.8,17.0,239
+A: sitting period cooled as usual,Older aircon (COP 3.5),Our system,2.536,288.4,34.4,128
+A: sitting period cooled as usual,New 5-tick aircon (COP 5.5),Fixed 25 C aircon only,2.46,279.8,0.0,551
+A: sitting period cooled as usual,New 5-tick aircon (COP 5.5),"Fixed 26 C + 0.5 m/s fan, no camera",2.049,233.0,16.7,239
+A: sitting period cooled as usual,New 5-tick aircon (COP 5.5),Our system,1.658,188.6,32.6,128
+B: sitting period not cooled by anyone,Older aircon (COP 3.5),Fixed 25 C aircon only,3.442,391.5,0.0,690
+B: sitting period not cooled by anyone,Older aircon (COP 3.5),"Fixed 26 C + 0.5 m/s fan, no camera",2.855,324.7,17.1,257
+B: sitting period not cooled by anyone,Older aircon (COP 3.5),Our system,2.536,288.4,26.3,128
+B: sitting period not cooled by anyone,New 5-tick aircon (COP 5.5),Fixed 25 C aircon only,2.191,249.2,0.0,690
+B: sitting period not cooled by anyone,New 5-tick aircon (COP 5.5),"Fixed 26 C + 0.5 m/s fan, no camera",1.825,207.5,16.7,257
+B: sitting period not cooled by anyone,New 5-tick aircon (COP 5.5),Our system,1.658,188.6,24.3,128

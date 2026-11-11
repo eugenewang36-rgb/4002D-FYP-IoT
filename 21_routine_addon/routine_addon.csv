@@ -1,0 +1,37 @@
+feature,case,aircon,ours_kwh,fixed_kwh,ours_sgd_yr,fixed_sgd_yr,uncomfortable_min,extra_sgd_yr,uncomfortable_first30,uncomfortable_in_window,with_rule_kwh,saved_kwh,saved_sgd_per_evening,uncomfortable_no_rule,uncomfortable_with_rule,uncomfortable_fixed
+base,"6 pm to 6 am, no add-on",Older aircon (COP 3.5),2.536,3.865,288,440,128,,,,,,,,,
+base,"6 pm to 6 am, no add-on",New 5-tick aircon (COP 5.5),1.658,2.46,189,280,128,,,,,,,,,
+pre-cooling,"ours, 0 min",Older aircon (COP 3.5),2.536,,,,128,0.0,0,,,,,,,
+pre-cooling,"ours, 15 min",Older aircon (COP 3.5),2.65,,,,154,12.9,16,,,,,,,
+pre-cooling,"ours, 30 min",Older aircon (COP 3.5),2.765,,,,171,26.0,25,,,,,,,
+pre-cooling,"ours, 60 min",Older aircon (COP 3.5),2.995,,,,140,52.2,20,,,,,,,
+pre-cooling,"fixed 25 °C aircon only, 0 min",Older aircon (COP 3.5),3.865,,,,551,0.0,11,,,,,,,
+pre-cooling,"fixed 25 °C aircon only, 15 min",Older aircon (COP 3.5),3.977,,,,547,12.7,7,,,,,,,
+pre-cooling,"fixed 25 °C aircon only, 30 min",Older aircon (COP 3.5),4.089,,,,541,25.4,1,,,,,,,
+pre-cooling,"fixed 25 °C aircon only, 60 min",Older aircon (COP 3.5),4.314,,,,540,51.0,0,,,,,,,
+pre-cooling setpoint,"ours, 15 min at 25 C",Older aircon (COP 3.5),2.65,,,,154,12.9,16,,,,,,,
+pre-cooling setpoint,"ours, 15 min at 26 C",Older aircon (COP 3.5),2.64,,,,149,11.8,15,,,,,,,
+pre-cooling setpoint,"ours, 15 min at 27 C",Older aircon (COP 3.5),2.631,,,,127,10.8,15,,,,,,,
+pre-cooling setpoint,"ours, 15 min at 28 C",Older aircon (COP 3.5),2.62,,,,100,9.6,1,,,,,,,
+pre-cooling setpoint,"fixed 25 °C aircon only, 15 min at 25 C",Older aircon (COP 3.5),3.977,,,,547,12.7,7,,,,,,,
+pre-cooling setpoint,"fixed 25 °C aircon only, 15 min at 26 C",Older aircon (COP 3.5),3.971,,,,549,12.0,9,,,,,,,
+pre-cooling setpoint,"fixed 25 °C aircon only, 15 min at 27 C",Older aircon (COP 3.5),3.964,,,,554,11.2,14,,,,,,,
+pre-cooling setpoint,"fixed 25 °C aircon only, 15 min at 28 C",Older aircon (COP 3.5),3.957,,,,559,10.5,19,,,,,,,
+pre-shutdown,0 min,Older aircon (COP 3.5),2.613,,297,,128,,,0,,,,,,
+pre-shutdown,15 min,Older aircon (COP 3.5),2.575,,293,,142,,,14,,,,,,
+pre-shutdown,30 min,Older aircon (COP 3.5),2.536,,288,,157,,,29,,,,,,
+pre-shutdown,45 min,Older aircon (COP 3.5),2.497,,284,,172,,,44,,,,,,
+pre-shutdown,60 min,Older aircon (COP 3.5),2.458,,280,,187,,,59,,,,,,
+pre-shutdown,90 min,Older aircon (COP 3.5),2.378,,270,,216,,,88,,,,,,
+pre-shutdown,0 min,New 5-tick aircon (COP 5.5),1.707,,194,,128,,,0,,,,,,
+pre-shutdown,15 min,New 5-tick aircon (COP 5.5),1.683,,191,,142,,,14,,,,,,
+pre-shutdown,30 min,New 5-tick aircon (COP 5.5),1.658,,189,,157,,,29,,,,,,
+pre-shutdown,45 min,New 5-tick aircon (COP 5.5),1.634,,186,,172,,,44,,,,,,
+pre-shutdown,60 min,New 5-tick aircon (COP 5.5),1.609,,183,,187,,,59,,,,,,
+pre-shutdown,90 min,New 5-tick aircon (COP 5.5),1.558,,177,,216,,,88,,,,,,
+occupancy,Out of the bedroom 7:00-8:00 pm (while sitting),Older aircon (COP 3.5),2.521,3.835,,,,,,,2.513,0.008,0.0,120,120,551
+occupancy,Out of the bedroom 7:00-8:00 pm (while sitting),New 5-tick aircon (COP 5.5),1.649,2.441,,,,,,,1.641,0.007,0.0,120,120,551
+occupancy,Out 9:00-9:45 pm (workout interrupted),Older aircon (COP 3.5),2.457,3.787,,,,,,,2.35,0.107,0.03,83,126,506
+occupancy,Out 9:00-9:45 pm (workout interrupted),New 5-tick aircon (COP 5.5),1.608,2.41,,,,,,,1.535,0.073,0.02,83,126,506
+occupancy,Bedroom empty all night (10 pm-6 am),Older aircon (COP 3.5),3.601,3.698,,,,,,,1.156,2.445,0.76,118,118,101
+occupancy,Bedroom empty all night (10 pm-6 am),New 5-tick aircon (COP 5.5),2.384,2.353,,,,,,,0.758,1.626,0.51,118,118,101

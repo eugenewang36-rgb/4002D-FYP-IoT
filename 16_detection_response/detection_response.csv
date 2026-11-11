@@ -1,0 +1,7 @@
+period,strategy,too_warm_min,too_cold_min,minutes_to_comfort,kwh,avg_set
+Studying / resting 6:00-8:30 pm,ours,1.0,30.2,1.0,0.019,24.72
+Studying / resting 6:00-8:30 pm,no_detect,1.0,30.2,1.0,0.019,24.72
+Studying / resting 6:00-8:30 pm,aircon_only,14.1,0.0,14.1,1.218,25.16
+Workout 8:30-10:00 pm,ours,90.0,0.0,,1.016,27.63
+Workout 8:30-10:00 pm,no_detect,90.0,0.0,,0.033,31.42
+Workout 8:30-10:00 pm,aircon_only,90.0,0.0,,0.652,27.96

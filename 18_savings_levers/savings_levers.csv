@@ -1,0 +1,11 @@
+case,sgd_year_cop35,saving_vs_fixed25_pct,saving_5tick_pct,uncomfortable_min,workout_avg_set_C,sleep_min_too_warm,sleep_min_too_cold,sleep_avg_set_C
+"Aircon alone, fixed 25 °C (baseline)",412.2,0.0,0.0,600,28.26,480,0,26.2
+"Our system today (sleep fan 0.5, workout 23.2 °C + fan high)",357.7,13.2,12.3,144,26.73,51,3,25.32
+B: sleep fan 0.85 m/s,333.5,19.1,17.4,97,26.73,0,7,25.17
+B + ramp 0.25 °C/h,271.3,34.2,32.4,501,26.73,404,7,26.02
+B + ramp 0.5 °C/h,258.5,37.3,35.5,541,26.73,444,7,26.3
+"A + B: + workout aircon 25 °C, fan high",319.9,22.4,20.6,91,27.63,0,1,25.25
+A + B + ramp 0.25 °C/h,257.8,37.5,35.7,555,27.63,464,1,26.11
+A + B + ramp 0.5 °C/h,246.1,40.3,38.6,564,27.63,473,1,26.39
+B + in-band ramp (target SET 25.0 -> 25.4),321.1,22.1,20.4,97,26.73,0,7,25.33
+A + B + in-band ramp,307.5,25.4,23.7,91,27.63,0,1,25.41

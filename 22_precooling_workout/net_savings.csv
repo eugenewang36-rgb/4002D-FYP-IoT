@@ -1,0 +1,9 @@
+case,controller_w,controller_sgd_year,aircon,fixed25_sgd,ours_sgd,gross_saving_sgd,gross_pct,net_saving_sgd,net_pct
+Pi averaging 3 W,6.31,17.2,Older aircon (COP 3.5),440.0,288.0,151.0,34.3,133.8,30.4
+Pi averaging 3 W,6.31,17.2,New 5-tick aircon (COP 5.5),280.0,189.0,91.0,32.5,73.8,26.3
+central: Pi averaging 5 W,8.61,23.5,Older aircon (COP 3.5),440.0,288.0,151.0,34.3,127.5,29.0
+central: Pi averaging 5 W,8.61,23.5,New 5-tick aircon (COP 5.5),280.0,189.0,91.0,32.5,67.5,24.1
+Pi averaging 8 W,12.06,32.9,Older aircon (COP 3.5),440.0,288.0,151.0,34.3,118.1,26.8
+Pi averaging 8 W,12.06,32.9,New 5-tick aircon (COP 5.5),280.0,189.0,91.0,32.5,58.1,20.7
+"central, Pi/camera/illuminator on 12 h only",5.28,14.4,Older aircon (COP 3.5),440.0,288.0,151.0,34.3,136.6,31.0
+"central, Pi/camera/illuminator on 12 h only",5.28,14.4,New 5-tick aircon (COP 5.5),280.0,189.0,91.0,32.5,76.6,27.4
